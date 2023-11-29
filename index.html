@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Predictor</title>
+</head>
+<body>
+    <h1>Price Predictor Dashboard</h1>
+    
+    <form action="/predict" method="post">
+        <label for="property_size">Property Size:</label>
+        <input type="text" name="property_size" required>
+        <br>
+
+        <label for="number_of_bedrooms">Number of Bedrooms:</label>
+        <input type="text" name="number_of_bedrooms" required>
+        <br>
+
+        <label for="number_of_bathrooms">Number of Bathrooms:</label>
+        <input type="text" name="number_of_bathrooms" required>
+        <br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
