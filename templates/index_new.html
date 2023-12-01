@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Predictor</title>
+
+    <!-- Add some simple styling for a more appealing appearance -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Price Predictor Dashboard</h1>
+    
+    <form action="/predict" method="post">
+        <label for="property_size">Property Size:</label>
+        <!-- Use a number input for property size -->
+        <input type="number" name="property_size" required>
+        <br>
+
+        <label for="number_of_bedrooms">Number of Bedrooms:</label>
+        <!-- Use a number input for the number of bedrooms -->
+        <input type="number" name="number_of_bedrooms" required>
+        <br>
+
+        <label for="number_of_bathrooms">Number of Bathrooms:</label>
+        <!-- Use a number input for the number of bathrooms -->
+        <input type="number" name="number_of_bathrooms" required>
+        <br>
+
+        <button type="submit">Predict Price</button>
+    </form>
+
+    {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
