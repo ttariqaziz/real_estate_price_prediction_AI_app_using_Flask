@@ -1,5 +1,8 @@
 # Real Estate Price Predictor App using FLASK
 
+Welcome to the Real Estate Price Predictor Dashboard! This web application leverages machine learning to predict housing prices based on key features such as property size, number of bedrooms, and number of bathrooms. Built with Flask, a lightweight Python web framework, the dashboard offers an intuitive and user-friendly interface for users to input property details and receive accurate price predictions.
+
+
 Dataset is randomly generated using Python which is very similar to realistic data contains 'property_size' is in square feet, 'number_of_bedrooms' and 'number_of_bathrooms' are integers, and 'price' as target variable.
 
 This project has 3 major parts:
